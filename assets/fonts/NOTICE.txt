@@ -1,0 +1,6 @@
+NanumSquare font files
+
+Source: NAVER Hangeul Hangeul Areumdabge static webfont distribution.
+Files: NanumSquareR.woff, NanumSquareB.woff.
+License: SIL Open Font License 1.1.
+License information: https://help.naver.com/service/30016/contents/18088?osType=PC&lang=ko

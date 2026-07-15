@@ -64,7 +64,7 @@
     drawCell(food, '#ffb552', 5);
     drawCell(enemy, '#ff5f75', 4);
     snake.forEach((part, index) => drawCell(part, index === 0 ? '#b9f875' : '#72ce6f'));
-    if (paused) { context.fillStyle = 'rgba(8,10,14,.62)'; context.fillRect(0, 0, canvas.width, canvas.height); context.fillStyle = '#fff'; context.font = '700 32px sans-serif'; context.textAlign = 'center'; context.fillText('일시정지', canvas.width / 2, canvas.height / 2); }
+    if (paused) { context.fillStyle = 'rgba(8,10,14,.62)'; context.fillRect(0, 0, canvas.width, canvas.height); context.fillStyle = '#fff'; context.font = '700 32px NanumSquare, sans-serif'; context.textAlign = 'center'; context.fillText('일시정지', canvas.width / 2, canvas.height / 2); }
   }
 
   function stopGame(message) {
