@@ -4,19 +4,15 @@ const navLinks = document.querySelectorAll('.site-nav a');
 
 if (header && navToggle) {
   navToggle.addEventListener('click', () => {
-    const isOpen = header.getAttribute('data-menu-open') === 'true';
-    header.setAttribute('data-menu-open', String(!isOpen));
-    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    const open = header.dataset.menuOpen === 'true';
+    header.dataset.menuOpen = String(!open);
+    navToggle.setAttribute('aria-expanded', String(!open));
   });
 }
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    if (header) {
-      header.setAttribute('data-menu-open', 'false');
-    }
-    if (navToggle) {
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
+navLinks.forEach((link) => link.addEventListener('click', () => {
+  if (header && navToggle) {
+    header.dataset.menuOpen = 'false';
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+}));
